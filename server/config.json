@@ -1,0 +1,13 @@
+{
+    "local_dns":{
+        "address": "192.168.1.116",
+        "port": 53
+    },
+    "external_dns":{
+        "address": "8.8.8.8",
+        "port": 53
+    },
+    "dns_records":{
+            "ctest.cdn.nintendo.net" : "192.168.1.116"
+    }
+}
