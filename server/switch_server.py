@@ -1,4 +1,3 @@
-#!/usr/bin/python
 from dnslib import *
 from dnslib import server
 import argparse
