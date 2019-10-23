@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Display key events</title>
+    </head>
+
+    <body>
+        <div id="log"></div>
+        <script src="./lib/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">
+            function log(message){
+                $('#log').html(message)
+            }
+
+            $( document ).ready(function(){
+                $(document).bind('keypress', function(e) {
+                    log( "Handler for .keypress() called. " + e.which);
+                });
+
+                $(document).bind('keydown', function(e) {
+                    log( "Handler for .keydown() called. " + e.which);
+                });
+
+                $(document).bind('keyup', function(e) {
+                    log( "Handler for .keyup() called. " + e.which);
+                });
+            });
+        </script>
+    </body>
+
+
+</html>

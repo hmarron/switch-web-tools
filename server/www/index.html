@@ -1,9 +1,36 @@
 <html>
     <head>
-        <!-- EXAMPLE OF HTTP REDIRECT -->
-        <!-- <meta http-equiv="refresh" content="0; URL=http://www.google.com/" /> -->
+        <link rel="stylesheet" href="./lib/simple-keyboard/index.css">
+        <link rel="stylesheet" href="./css/styles.css">
+
     </head>
     <body>
-        <h1>Hello World</h1>
+        <button onClick="window.location.reload();">Refresh</button>
+        <button id="mapping-config-button">Toggle Mapping Config</button>
+        <div id="log"></div>
+        <div id="mapping-config"></div>
+
+        <iframe id="iframe" src="./display_inputs.html"></iframe>
+        <script src="./lib/jquery-3.4.1.min.js"></script>
+        <script src="./lib/simple-keyboard/index.min.js"></script>
+        <script src="./lib/sbd.js"></script>
+        <script src="./js/mapping.js"></script>
+        <script type="text/javascript">
+        function log(message){
+            $('#log').html(message)
+        }
+
+        $( document ).ready(function(){
+            initMapping()
+            startMappingInputs(100)
+        })
+
+        //lock focus on iframe
+        $("#iframe").focus()
+        $("#iframe").blur(function(){
+            $("#iframe").focus()
+        });
+
+        </script>
     </body>
 </html>
